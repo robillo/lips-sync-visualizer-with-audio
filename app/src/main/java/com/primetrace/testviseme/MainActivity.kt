@@ -339,13 +339,13 @@ class MainActivity : AppCompatActivity() {
         // Determine the mouth state based on amplitude
         val state = when {
             smoothedAmplitude < 0.01 -> 0  // Closed
-            smoothedAmplitude < 0.03 -> 1  // Slightly open
-            smoothedAmplitude < 0.05 -> 2  // Half open
-            smoothedAmplitude < 0.07 -> 3  // Half open
-            smoothedAmplitude < 0.09 -> 4  // Half open
-            smoothedAmplitude < 0.12 -> 5  // Mostly open
-            smoothedAmplitude < 0.14 -> 6  // Mostly open
-            smoothedAmplitude < 0.16 -> 7  // Mostly open
+            smoothedAmplitude < 0.04 -> 1  // Slightly open
+            smoothedAmplitude < 0.07 -> 2  // Half open
+            smoothedAmplitude < 0.10 -> 3  // Half open
+            smoothedAmplitude < 0.12 -> 4  // Half open
+            smoothedAmplitude < 0.14 -> 5  // Mostly open
+            smoothedAmplitude < 0.16 -> 6  // Mostly open
+            smoothedAmplitude < 0.18 -> 7  // Mostly open
             else -> 4                     // Fully open
         }
         
